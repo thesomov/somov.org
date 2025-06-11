@@ -5,6 +5,7 @@
   box-sizing: border-box;
 }
 
+
 html {
   height: 100%; /* Обеспечивает корректную базу для высоты body */
 }
@@ -104,6 +105,8 @@ header {
   color: #ffffff;
   font-size: 1.15em;
   font-weight: 300;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
 
 .header-desc a {
@@ -142,9 +145,10 @@ main {
   align-items: stretch;
   background: #343434;
   margin: 20px 0;
-  padding: 55px 70px 75px 70px; /* сверху, справа, снизу, слева */
-  border: 1px solid #343434;
+  padding: 55px 70px 75px 70px;
   gap: 0;
+  border-radius: 8px; /* Добавляем скругление углам */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Добавляем легкую тень для глубины */
 }
 
 .card-left {
@@ -256,6 +260,7 @@ main {
   display: flex;
   align-items: center;
   justify-content: center;
+  border-radius: 6px;
 }
 .btn:hover {
   background: #282828;
@@ -283,6 +288,7 @@ main {
   display: flex;
   align-items: center;
   justify-content: center;
+  border-radius: 6px;
 }
 .btn-windows:hover {
   background: #282828;
@@ -405,6 +411,7 @@ footer {
   aspect-ratio: 1/1;
   overflow: hidden;
   display: block;
+  border-radius: 6px;
 }
 
 .gallery img {
