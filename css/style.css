@@ -5,7 +5,6 @@
   box-sizing: border-box;
 }
 
-
 html {
   height: 100%; /* Обеспечивает корректную базу для высоты body */
 }
@@ -261,6 +260,7 @@ main {
   align-items: center;
   justify-content: center;
   border-radius: 6px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25); /* Добавляем легкую тень */
 }
 .btn:hover {
   background: #282828;
@@ -289,6 +289,8 @@ main {
   align-items: center;
   justify-content: center;
   border-radius: 6px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25); /* Добавляем легкую тень */
+
 }
 .btn-windows:hover {
   background: #282828;
