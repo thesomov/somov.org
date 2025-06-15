@@ -62,12 +62,42 @@ header {
   text-decoration: none;
 }
 
+.header-social-icons {
+  position: absolute;
+  top: 10px; /* На одном уровне с .site-title */
+  /* Используем тот же принцип расчета, что и для .site-title, но для правого края */
+  /* Это разместит иконки на расстоянии ~70px от правого края viewport на широких экранах */
+  right: calc((945px - 100vw) / 2 + 70px);
+  display: flex;
+  align-items: center;
+  z-index: 10;
+  color: #ffffff; /* Чтобы разделитель " / " был белым */
+}
+.header-social-icons a {
+  color: #ffffff;
+  text-decoration: underline;
+  text-decoration-thickness: 0.01px; /* Как в .footer-links a */
+  text-underline-offset: 2px;      /* Как в .footer-links a */
+  font-weight: 300;                /* Как в .footer-links a */
+  font-size: 0.93em;               /* Как у .footer-bottom, где находятся .footer-links */
+  transition: color 0.2s, text-decoration 0.2s;
+}
+.header-social-icons span.social-separator {
+  font-size: 0.93em; /* Такой же размер шрифта, как у ссылок */
+  font-weight: 300;  /* Такой же вес шрифта, как у ссылок */
+  color: #ffffff;    /* Явно задаем цвет, хотя он наследуется */
+  padding: 0 0.35em; /* Добавляем отступы слева и справа от слеша. 0.35em ~ 5-6px */
+}
+.header-social-icons a:hover {
+  text-decoration: none;
+  color: #fff;
+}
 .header-logo-center {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin: 40px 0 36px 0;
+  margin: 40px 0 36px 0; 
 }
 
 .header-logo-center img {
@@ -457,9 +487,7 @@ footer {
   .settings-header {
     margin-top: 20px; /* Добавляем верхний отступ для хедера на других страницах в мобильной версии */
   }
-   .header-logo-center {
-    margin-top: 60px; /* Было 40px из глобальных стилей */
-  }
+
   /* На мобильных переопределяем заголовок для центрирования: */
   .site-title {
     position: absolute;
@@ -469,7 +497,26 @@ footer {
     /* Можно добавить дополнительные стили для мобильных, если нужно */
     white-space: nowrap;
   }
-  
+
+  .header-social-icons {
+    position: static; /* Возвращаем в поток документа */
+    /* Сбрасываем позиционирование с десктопа */
+    left: auto;
+    right: auto;
+    top: auto;
+    /* Размещаем под заголовком .site-title */
+    /* .site-title (abs, top:0, height ~30-35px). Даем отступ ~35px + 10px = 45px */
+    margin-top: 30px; 
+    margin-bottom: 15px; /* Отступ снизу до .header-logo-center */
+    justify-content: center; /* Центрируем иконки */
+  }
+  .settings-header .header-social-icons {
+    margin-bottom: -40px; /* Уменьшенный отступ снизу */
+  }
+  .header-logo-center {
+    margin-top: 20px; /* Уменьшаем отступ сверху, т.к. иконки теперь занимают место и имеют margin-bottom */
+  }
+
   .header-desc {
     flex-direction: column;
     padding: 45px 20px;
