@@ -525,6 +525,20 @@ footer {
       z-index: 10;
       display: none;
   }
+  /* Стили для разделения BTC адреса в футере */
+.copyable-footer-item .btc-label {
+  margin-right: 5px;
+}
+
+.copyable-footer-item .btc-address {
+  font-family: 'Courier New', Courier, monospace; /* Классический моноширинный шрифт */
+  background-color: rgba(255, 255, 255, 0.08); /* Легкий фон для выделения */
+  padding: 2px 5px;
+  border-radius: 4px;
+  letter-spacing: 0.5px; /* Небольшое увеличение расстояния между буквами */
+  line-height: 1;
+}
+
 /* Адаптивные стили для мобильных */
 @media (max-width: 700px) {
   .main-wrapper {
@@ -619,6 +633,7 @@ footer {
   .footer-menu {
     margin-top: 20px;
     margin-bottom: 20px;
+    line-height: 1.8;
   }
   
   .footer-bottom {
